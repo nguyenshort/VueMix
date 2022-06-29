@@ -13,7 +13,12 @@ export default {
     color: {
       name: 'Màu',
       control: { type: 'select' },
-      options: ['primary', 'success', 'dark', 'warn'],
+      options: ['', 'primary', 'success', 'dark', 'warn'],
+    },
+    size: {
+      name: 'Kích Cỡ',
+        control: { type: 'select' },
+      options: ['xl', 'large', 'default', 'small', 'mini'],
     }
   },
 };
