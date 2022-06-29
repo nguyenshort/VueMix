@@ -1,5 +1,4 @@
-import {defineComponent, PropType} from "vue";
-import {UIColor} from "../types";
+import {defineComponent} from "vue";
 import {getColor} from "./index";
 
 export default defineComponent({
@@ -11,7 +10,7 @@ export default defineComponent({
     },
     props: {
         color: {
-            type: String as PropType<UIColor | string>,
+            type: String,
             default: '',
         },
         danger: {
