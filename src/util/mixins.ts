@@ -11,7 +11,7 @@ export default defineComponent({
     },
     props: {
         color: {
-            type: String as PropType<UIColor>,
+            type: String as PropType<UIColor | string>,
             default: '',
         },
         danger: {

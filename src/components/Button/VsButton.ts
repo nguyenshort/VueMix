@@ -106,6 +106,7 @@ export default defineComponent({
                 `vs-button`,
                 // `vs-button--${this.color.replace('#', '')}`,
                 { [`vs-button--${this.componentColor}`] : this.componentColor },
+                { [`vs-button--fff`] : this.color === '#fff' },
                 { [`vs-button--size-${this.size}`] : this.size },
                 { [`vs-button--active`] : this.active },
                 { [`vs-button--active-disabled`] : this.activeDisabled },
