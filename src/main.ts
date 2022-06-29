@@ -1,4 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import vmButton from "./components/Button"
 
-createApp(App).mount('#app')
+import './styles/_index.sass'
+
+const app = createApp(App)
+
+    app.use(vmButton)
+
+    app.mount('#app')
