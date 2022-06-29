@@ -1,5 +1,5 @@
 import {defineComponent, PropType} from "vue";
-import {UIColor} from "../components/Button/types";
+import {UIColor} from "../components/Button/Base/types";
 import {getColor} from "./index";
 
 export default defineComponent({

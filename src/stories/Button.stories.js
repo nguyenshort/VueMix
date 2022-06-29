@@ -1,8 +1,8 @@
-import VsButton from '../components/Button/VsButton';
-import {UIColor} from "../components/Button/types"
+import VsButton from '../components/Button/Base/VsButton';
+import {UIColor} from "../components/Button/Base/types"
 
 import '../styles/_index.sass'
-import '../components/Button/_button.sass'
+import '../components/Button/Base/_button.sass'
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {

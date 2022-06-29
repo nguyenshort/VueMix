@@ -1,6 +1,6 @@
 import {defineComponent, h, PropType} from "vue";
-import mixins from "../../util/mixins";
-import ripple, {rippleCut, rippleReverse} from "../../util/ripple";
+import mixins from "../../../util/mixins";
+import ripple, {rippleCut, rippleReverse} from "../../../util/ripple";
 import {UISize} from "./types";
 
 export default defineComponent({
