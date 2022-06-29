@@ -1,7 +1,7 @@
 import {defineComponent, h, PropType} from "vue";
 import mixins from "../../../util/mixins";
 import ripple, {rippleCut, rippleReverse} from "../../../util/ripple";
-import {UISize} from "./types";
+import {UISize} from "../../../types";
 
 export default defineComponent({
     name: 'VsButton',

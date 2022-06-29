@@ -1,5 +1,5 @@
 import VsButton from '../components/Button/Base/VsButton';
-import {UIColor} from "../components/Button/Base/types"
+import {UIColor} from "../types"
 
 import '../styles/_index.sass'
 import '../components/Button/Base/_button.sass'
