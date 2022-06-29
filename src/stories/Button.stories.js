@@ -1,5 +1,4 @@
 import VsButton from '../components/Button/Base/VsButton';
-import {UIColor} from "../types"
 
 import '../styles/_index.sass'
 import '../components/Button/Base/_button.sass'
@@ -40,7 +39,7 @@ const Template = (args) => ({
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 const primaryArgs = {
-  color: UIColor.primary,
+  color: '',
   ripple: '',
   flat: true,
   success: true,
