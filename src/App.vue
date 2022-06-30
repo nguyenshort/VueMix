@@ -116,6 +116,13 @@
     </div>
 
 
+    <div class="center con-switch">
+      <vs-switch v-model:value="switch1" />
+      <vs-switch success v-model:value="switch2" />
+      <vs-switch warn v-model:value="switch3" disabled />
+    </div>
+
+
     <div style="height: 300px"></div>
 
 
@@ -130,12 +137,19 @@ import {reactive, ref} from "vue";
 import VsAlert from "./components/Alert/Base/VsAlert.vue";
 import VsInput from "@components/Input/Base/VsInput.vue";
 import VsCheckbox from "@components/CheckBox/Base/VsCheckbox.vue";
+import VsSwitch from "@components/Switch/Base/VsSwitch.vue";
 
 const show = ref(false)
 const option = ref(true)
 const options = reactive<string[]>([])
 
 const value = ref('')
+
+// Switch
+const switch1 = ref(false)
+const switch2 = ref(true)
+const switch3 = ref(true)
+
 </script>
 
 
