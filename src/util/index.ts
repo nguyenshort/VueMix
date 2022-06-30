@@ -108,7 +108,8 @@ const setColor = (colorName: string, color: string, el: any, addClass?: boolean)
   }
 }
 
-const getColor = (color: string) => {
+const getColor = (color?: string) => {
+  if(!color) return ''
   function hexToRgb(hex: string) {
     const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
     hex = hex.replace(shorthandRegex, (m: any, r: string, g: string, b: string) => {

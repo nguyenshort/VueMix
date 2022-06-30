@@ -29,8 +29,38 @@
 
 
     <div class="box-loading">
-      <vs-loading type="corners" />
+<!--
+      <vs-loading type="corners" :is-visible="false" />
+-->
     </div>
+
+    <div class="center content-inputs">
+      <vs-input v-model:value="value" placeholder="Name" />
+    </div>
+
+    <div class="center content-inputs">
+      <vs-input v-model:value="value" placeholder="Evan You" label="Name" />
+    </div>
+
+    <div class="center content-inputs">
+      <vs-input
+          label-placeholder="Country"
+          v-model:value="value"
+          primary
+          border
+          state="primary"
+      >
+        <template #icon>
+          <i class='bx bx-user'></i>
+        </template>
+
+        <template #primary>
+          Lỗi đăng ký
+        </template>
+
+      </vs-input>
+    </div>
+
   </div>
 
 </template>
@@ -39,9 +69,11 @@ import './components/Button/Base/_button.sass'
 import VsButton from "./components/Button/Base/VsButton";
 import {ref} from "vue";
 import VsAlert from "./components/Alert/Base/VsAlert.vue";
-import VsLoading from "@components/Loading/Base/VsLoading.vue";
+import VsInput from "@components/Input/Base/VsInput.vue";
 
 const show = ref(false)
+
+const value = ref('')
 </script>
 
 
@@ -66,5 +98,15 @@ const show = ref(false)
   cursor: pointer;
   transition: all .25s ease;
 }
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
 
+body, button, input {
+  font-family: Poppins,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
 </style>

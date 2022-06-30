@@ -3,7 +3,7 @@ import App from './App.vue'
 import vmButton from "./components/Button/Base"
 import vmButtonGroup from "./components/Button/Group"
 
-import './styles/_index.sass'
+import './styles/index'
 
 const app = createApp(App)
 
