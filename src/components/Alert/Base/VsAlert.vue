@@ -59,18 +59,11 @@
 <script lang="ts" setup>
 
 import {computed} from "vue";
-import VsIconPlus from "../../../icons/VsIconsPlus";
-import VsIconClose from "../../../icons/VsIconsClose";
+import VsIconPlus from "@icons/VsIconsPlus";
+import VsIconClose from "@icons/VsIconsClose";
+import {VsProps} from "@util/types/global"
 
-const props = withDefaults(defineProps<{
-  color?: string
-  danger?: boolean
-  success?: boolean
-  warn?: boolean
-  dark?: boolean
-  primary?: boolean
-  active?: boolean
-
+interface VsAlertProps extends VsProps{
   solid?: boolean
   border?: boolean
   shadow?: boolean
@@ -82,7 +75,8 @@ const props = withDefaults(defineProps<{
   closable?: boolean
   progress?: number
   page?: number
-}>(), {
+}
+const props = withDefaults(defineProps<VsAlertProps>(), {
   value: true,
   hiddenContent: true,
   progress: 0,

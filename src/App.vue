@@ -14,7 +14,7 @@
     </vs-button>
 
     <div>
-      <vs-alert shadow v-model:hidden-content="show" >
+      <vs-alert v-model:hidden-content="show" >
         <template #title>
           Vuesax Framework
         </template>
@@ -26,6 +26,11 @@
         </template>
       </vs-alert>
     </div>
+
+
+    <div class="box-loading">
+      <vs-loading type="corners" />
+    </div>
   </div>
 
 </template>
@@ -34,6 +39,7 @@ import './components/Button/Base/_button.sass'
 import VsButton from "./components/Button/Base/VsButton";
 import {ref} from "vue";
 import VsAlert from "./components/Alert/Base/VsAlert.vue";
+import VsLoading from "@components/Loading/Base/VsLoading.vue";
 
 const show = ref(false)
 </script>
@@ -48,4 +54,17 @@ const show = ref(false)
 #prview > * + * {
   margin-top: 1rem;
 }
+
+.box-loading {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  margin: 5px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,.07);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
 </style>
