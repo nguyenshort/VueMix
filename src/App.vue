@@ -46,9 +46,9 @@
       <vs-input
           label-placeholder="Country"
           v-model:value="value"
-          primary
+          success
           border
-          state="primary"
+          state="success"
       >
         <template #icon>
           <i class='bx bx-user'></i>
@@ -61,17 +61,79 @@
       </vs-input>
     </div>
 
+    <div class="center">
+      <vs-checkbox v-model:value="option">
+        Option
+      </vs-checkbox>
+    </div>
+
+
+    <div class="center">
+    <vs-checkbox v-model:value="option">
+      Primary
+    </vs-checkbox>
+    <vs-checkbox success v-model:value="option">
+      Success
+    </vs-checkbox>
+    <vs-checkbox danger v-model:value="option">
+      Danger
+    </vs-checkbox>
+    <vs-checkbox warn v-model:value="option">
+      warning
+    </vs-checkbox>
+    <vs-checkbox dark v-model:value="option">
+      dark
+    </vs-checkbox>
+    <vs-checkbox color="#7d33ff" v-model:value="option">
+      HEX
+    </vs-checkbox>
+    <vs-checkbox color="rgb(59,222,200)" v-model:value="option">
+      RGB
+    </vs-checkbox>
+  </div>
+
+
+    <div class="center con-checkbox">
+      <vs-checkbox val="html" v-model:value="options">
+        Html
+      </vs-checkbox>
+      <vs-checkbox val="css" v-model:value="options">
+        Css
+      </vs-checkbox>
+      <vs-checkbox val="javascript" v-model:value="options">
+        Javascript
+      </vs-checkbox>
+      <vs-checkbox val="vue" v-model:value="options">
+        Vue
+      </vs-checkbox>
+      <vs-checkbox val="vuesax" v-model:value="options">
+        Vuesax
+      </vs-checkbox>
+
+      <span class="data">
+        {{ options }}
+      </span>
+    </div>
+
+
+    <div style="height: 300px"></div>
+
+
+
   </div>
 
 </template>
 <script lang="ts" setup>
 import './components/Button/Base/_button.sass'
 import VsButton from "./components/Button/Base/VsButton";
-import {ref} from "vue";
+import {reactive, ref} from "vue";
 import VsAlert from "./components/Alert/Base/VsAlert.vue";
 import VsInput from "@components/Input/Base/VsInput.vue";
+import VsCheckbox from "@components/CheckBox/Base/VsCheckbox.vue";
 
 const show = ref(false)
+const option = ref(true)
+const options = reactive<string[]>([])
 
 const value = ref('')
 </script>
