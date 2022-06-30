@@ -41,8 +41,8 @@ export const Primary = Template.bind({});
 const primaryArgs = {
   color: '',
   ripple: '',
-  flat: true,
-  success: true,
+  flat: false,
+  success: false,
   border: false,
   gradient: false,
   relief: false,

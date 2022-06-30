@@ -8,6 +8,10 @@
     </vs-button>
   </vs-button-group>
 
+  <vs-button>
+    Primary
+  </vs-button>
+
 </template>
 <script lang="ts" setup>
 import './components/Button/Base/_button.sass'
