@@ -7,7 +7,7 @@ const ripple = (evt: any, color: any = '', solid: boolean = false) => {
   const x = evt.clientX - offset.left
   const y = evt.clientY - offset.top
 
-  let time = 0.6
+  let time = 10
 
   if(el.clientWidth > 150) {
     time = 1.2
@@ -33,6 +33,8 @@ const ripple = (evt: any, color: any = '', solid: boolean = false) => {
   effect.style.top = `${y}px`
 
   effectContent.appendChild(effect)
+
+  console.log(effect.getBoundingClientRect())
 
   el.appendChild(effectContent)
 

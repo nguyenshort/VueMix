@@ -131,7 +131,6 @@ const checkBoxClass = computed(() => ([
 
 const checkBoxStyle = computed(() => ({
   '--vs-color': getColor(props.color),
-
 }))
 
 const onChangeInput = (evt: Event) => {
